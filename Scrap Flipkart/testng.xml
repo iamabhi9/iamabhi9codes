@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+  <test name="Validate All TextBoxes present on Website">
+    <classes>
+      <class name="com.proptiger.elements.ValidateTextBoxes"/>
+    </classes>
+  </test>
+   <test name="Validate All Links of Website">
+    <classes>
+           <class name="com.proptiger.elements.ValidateLinks"/>
+    </classes>
+   <!--   <test name="All Elements">
+    <classes>
+           <class name="com.proptiger.elements.ValidateLinks"/>
+    </classes>
+    </test>-->
+    <!--  <test name="Test for ProjectsLinks on listing page">
+    <classes>
+           <class name="com.proptiger.Search.SearchAllCities"/>
+    </classes>
+  </test> --><!-- Test -->
+</suite> <!-- Suite -->

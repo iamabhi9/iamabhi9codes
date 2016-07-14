@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1468317091593_2" label="loginapis" name="loginapis">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/loginapis" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1467982147888_0" label="Window Working Set" name="Aggregate for window 1467982147887"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1468238955576_1" label="Window Working Set" name="Aggregate for window 1468238955575"/>
+</workingSetManager>

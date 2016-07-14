@@ -1,0 +1,90 @@
+package testJson;
+
+import static org.junit.Assert.*;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class CountriesTest {
+	 private final String USER_AGENT = "Mozilla/5.0";
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		  String url = "https://en.wikipedia.org/wiki/Accenture";
+
+		  URL obj = new URL(url);
+		  HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+		  
+		  con.setRequestMethod("GET");
+
+		  //add request header
+		  con.setRequestProperty("User-Agent", USER_AGENT);
+
+		  int responseCode = con.getResponseCode();
+		  System.out.println("\nSending 'GET' request to URL : " + url);
+		  System.out.println("Response Code : " + responseCode);
+
+		  BufferedReader in = new BufferedReader(
+		   new InputStreamReader(con.getInputStream()));
+		  String inputLine;
+		  StringBuffer response = new StringBuffer();
+
+		  while ((inputLine = in .readLine()) != null) {
+		   response.append(inputLine);
+		  } in .close();
+
+		  //print result- total output of API responce 
+		 
+		  System.out.println(response.toString());
+		 
+		  
+		  //parsing
+		  JSONParser parser = new JSONParser();
+		String output= response.toString();   //responce into string 
+		 
+		  JSONObject newobj= (JSONObject) parser.parse(output);    //parse string into one object 
+		  System.out.println(newobj.get("AbortProcess"));
+		  JSONArray arrPay= (JSONArray) newobj.get("Payload");  // parsed one array
+		  //it was array of objects
+		  for (Object objt: arrPay){
+			   JSONObject oneob= (JSONObject) objt;
+			   System.out.println("------------------------------------");
+			   System.out.println(objt.toString());
+			   
+		    System.out.println(oneob.get("name"));
+		    System.out.println(oneob.get("vertexId"));
+
+		    
+	
+	
+	}
+	}
+}

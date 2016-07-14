@@ -1,0 +1,53 @@
+package restassured;
+
+import static org.junit.Assert.*;
+
+import java.util.Map;
+
+import org.json.*;
+import org.json.simple.JSONArray;
+import org.junit.Assert;
+import org.junit.Test;
+import static com.jayway.restassured.RestAssured.*;
+
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.path.json.JsonPath;
+import com.jayway.restassured.response.Response;
+
+
+public class RestTest1 {
+
+	@Test
+	public void getRequestFindCapital()     {
+		
+// //RestAssured.given().get("https://restcountries.eu/rest/v1/all")
+//		Response res = get("http://restcountries.eu/rest/v1/name/norway"); 
+//		//  Response res = get("/service/single-user");
+//		  assertEquals(200, res.getStatusCode());
+//		  String json = res.asString();
+//		  JsonPath jp = new JsonPath(json);
+//		//  jp.setRoot("translations");
+//		  System.out.println(jp.get("altSpellings").toString());
+//		  JSONArray a= new JSONArray(jp.get("altSpellings").(type[]) collection.toArray(new type[collection.size()]));
+//		 // Map person = jp.get("es");
+//
+//		//  System.out.println(jp.get("name").toString().substring(1,jp.get("name").toString().length()-1));
+//		//  System.out.println(person.get("de"));
+//		//  assertEquals("Norway", jp.get("name").toString().substring(1,jp.get("name").toString().length()-1));
+//	//assertEquals("Norwegen", person.get("de"));
+		  String port = System.getProperty("server.port");
+		  System.out.println(port);
+	        if (port == null) {
+	            RestAssured.port = Integer.valueOf(8080);
+	        }
+	        else{
+	            RestAssured.port = Integer.valueOf(port);
+	        }		  System.out.println(port);
+
+		  given().when().get("http://restcountries.eu/rest/v1/name/norway").then().statusCode(200);
+		
+		
+		
+ 	}
+	
+}

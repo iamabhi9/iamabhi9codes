@@ -1,0 +1,32 @@
+package com.flipkart.scrap;
+
+import java.util.Scanner;
+
+public class Sol4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		String input=sc.next();
+		String output="";
+		int count=0;
+		int count2=0;
+		while(count<input.length())
+		{
+			switch (input.charAt(count))
+			{
+			case '{':
+			case '(':
+			case '[': output=output.concat(String.valueOf(input.charAt(count)))	;    	  
+			case '}':
+			case ']':
+			case ')':
+
+
+			}
+		}
+
+	}
+
+}

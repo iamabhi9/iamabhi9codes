@@ -1,0 +1,77 @@
+package com.flipkart.scrap;
+
+import java.util.Scanner;
+
+public class Sol4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		String input=sc.next();
+		boolean flag=false;
+		
+		String output="";
+		int count=0;
+		int count2=0;
+		while(count<input.length())
+		{
+			switch (input.charAt(count))
+			{
+			case '{':
+			case '(':
+			case '[': output=output.concat(String.valueOf(input.charAt(count)))	;    	break;  
+			case '}':
+				if(output.charAt(output.length()-1)=='{')
+				{
+					System.out.println(output);
+					output=output.substring(0, output.length()-1);
+					flag=true;
+					
+				}
+				else
+				{ flag=false;
+					break;
+				}
+	break;
+			case ']':if(output.charAt(output.length()-1)=='[')
+			{
+ 				output=output.substring(0, output.length()-1);
+				flag=true;
+				
+			}
+			else
+			{ flag=false;
+				break;
+			}
+break;
+				
+			case ')': if(output.charAt(output.length()-1)=='(')
+			{
+ 				output=output.substring(0, output.length()-1);
+				flag=true;
+				
+			}
+			else
+			{ flag=false;
+				break;
+			}
+break;
+
+			}
+			count++;
+		}		 
+		
+		if (flag==true && output.length()==0)
+		{
+			System.out.println(flag);
+			System.out.println(output.length());
+
+		}
+ 		else
+			System.out.println("false");
+
+	}
+
+}
+

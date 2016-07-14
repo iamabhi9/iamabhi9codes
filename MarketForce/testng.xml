@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+  
+  <test name="dataDisplayed">
+    <classes>
+      <class name="com.marketforce.elements.dataDisplayed"/>
+    </classes>
+  </test>
+  
+  <test name="PlaceHolderAnimation">
+    <classes>
+      <class name="com.marketforce.elements.PlaceHolderAnimation"/>
+    </classes>
+  </test> 
+  
+   <test name="testTypeAhead">
+    <classes>
+      <class name="com.marketforce.elements.testTypeAhead"/>
+    </classes>
+  </test> 
+  
+   <test name="TypeAndValidate">
+    <classes>
+      <class name="com.marketforce.elements.TypeAndValidate"/>
+    </classes>
+  </test> 
+  
+  
+    <test name="ValidateSideLinks">
+    <classes>
+      <class name="com.marketforce.elements.ValidateSideLinks"/>
+    </classes>
+  </test> 
+  
+     <test name="Verifyheading">
+    <classes>
+      <class name="com.marketforce.elements.Verifyheading"/>
+    </classes>
+  </test> 
+  
+  
+    <test name="ValidateLinks">
+    <classes>
+      <class name="com.marketforce.elements.ValidateLinks"/>
+    </classes>
+  </test> 
+  
+  
+ 
+</suite> <!-- Suite -->

@@ -1,0 +1,46 @@
+package com.flipkart.scrap;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Sol1 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		InputStreamReader r = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(r);
+ 
+ 		int count = 0;
+		String myst = br.readLine();
+ String output=null;
+		for (int i =0 ; i < myst.length(); i++)
+		{String temp2=null;
+			if (myst.charAt(i)=='(')
+			{ String temp=String.copyValueOf(null, myst.charAt(i), i);
+				output=output.concat(temp);
+				 
+				for (int j =i ; j < myst.length(); j++)
+				{
+					
+					if (myst.charAt(i)==')')
+				{ 
+					break;
+				}
+					else
+					{  temp2=String.copyValueOf(null, myst.charAt(i), i);
+						
+					}
+					
+				}
+				  String reverse = new StringBuffer(temp2).reverse().toString();
+			output=output.concat(reverse);
+
+				
+			}
+			 
+		}
+	}
+
+}

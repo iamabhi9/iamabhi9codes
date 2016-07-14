@@ -1,0 +1,17 @@
+package com.flipkart.scrap;
+
+import java.util.Scanner;
+
+public class Sol4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    Scanner isc = new Scanner(System.in);
+
+		while (sc.hasNext()) {
+	         String input=sc.next();
+	            //Complete the code
+	      }
+	}
+
+}

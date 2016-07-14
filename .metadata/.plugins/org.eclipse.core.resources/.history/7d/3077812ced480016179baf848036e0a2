@@ -1,0 +1,28 @@
+package com.flipkart.scrap;
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Sol3{
+ public static void main(String []argh)
+ { 
+	 
+	 
+	 HashMap<String, String> book = new HashMap<String, String>();
+    Scanner in = new Scanner(System.in);
+    int n=in.nextInt();
+    in.nextLine();
+    for(int i=0;i<n;i++)
+    {
+       String name=in.nextLine();
+       int phone=in.nextInt();
+        book.put(name, String.valueOf(phone));
+       in.nextLine();
+    }
+    while(in.hasNext())
+    {
+       String s=in.nextLine();
+    System.out.println(book.get(s)); 
+    }
+ }
+}
