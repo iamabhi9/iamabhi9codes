@@ -18,6 +18,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import bsh.Console;
+
 public class CountriesTest {
 	 private final String USER_AGENT = "Mozilla/5.0";
 
@@ -79,7 +81,7 @@ public class CountriesTest {
         Iterator i1 = slideContent.iterator();
 
         while (i1.hasNext()) {
-             // Here I try to take the title element from my slide but it doesn't work!
+          
           System.out.println();
           System.out.println();
 
